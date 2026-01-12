@@ -1,0 +1,173 @@
+.capture {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+/* ================= HEADER ================= */
+.capture__header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;  
+  padding: 16px;
+  background: #fff;
+  color: #111;
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  .capture_header_container-title{
+    display: flex;
+    align-items: center;    
+    flex: 1;
+    gap: 12px;
+    justify-content: space-evenly;
+    width: 100%;
+    .material-symbols-outlined{
+      background-color: #fff;
+      cursor: pointer;
+    }
+     h2 {
+    flex: 1;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 24px;
+  }
+
+  span {
+    cursor: pointer;
+  }
+  }
+.capture_header_container-steps{
+  width: 100%;
+  padding-top: 12px;
+  .title_progress{
+    margin: 0;
+    font-size: 14px;
+  }
+  .progress_tab{
+    width: 100%;
+    height: 6px;
+    box-shadow: 0px 0px 2px grey;
+    appearance: none;
+    
+  }
+  .progress_tab::-webkit-progress-bar {
+  background-color: rgb(219 224 230 / var(--tw-bg-opacity, 1));
+  border-radius: 10px;
+}
+
+.progress_tab::-webkit-progress-value {
+  background-color: #137FEC;
+  border-radius: 10px;
+}
+}
+ 
+}
+
+/* ================= CAMERA ================= */
+.capture__camera {
+  position: relative;
+  flex: 1;
+  background: #000;
+  overflow: hidden;
+}
+
+/* Webcam video */
+.webcam {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.current_photo{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  top: calc(50% - 89px)
+}
+
+/* Dark overlay */
+.capture__camera::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+/* ================= FRAME ================= */
+.camera-frame {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 85%;
+  max-width: 340px;
+  aspect-ratio: 1.58 / 1;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  z-index: 2;
+}
+
+/* Corners */
+
+.camera-frame--circle {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 50%;
+  width: 60%;
+  max-width: 300px;
+  aspect-ratio: 1 / 1.3;
+  border: 4px solid #137fec;
+  z-index: 2;
+
+}
+
+/* ================= INSTRUCTIONS ================= */
+.capture__instructions {
+  text-align: center;
+  padding: 16px 24px;
+  background: linear-gradient(to top, #000, transparent);
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  p {
+    font-size: 14px;
+    opacity: 0.7;
+  }
+}
+
+/* ================= CONTROLS ================= */
+.capture__controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px 24px;
+  background: #000;
+
+  button {
+    flex: 1;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+  }
+
+  .primary {
+    background: #137fec;
+    color: #fff;
+    font-weight: 600;
+  }
+}
