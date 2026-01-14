@@ -1,0 +1,152 @@
+.identity-error {
+  min-height: 100vh;
+  max-width: 430px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem 0.5rem;
+  }
+
+  &__title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #111418;
+  }
+
+  &__content {
+    flex: 1;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__state {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  &__illustration {
+    position: relative;
+    margin: 15px 0 1.5rem;
+  }
+
+  &__halo {
+    position: absolute;
+    inset: -16px;
+    background: rgba(220, 38, 38, 0.15);
+    border-radius: 50%;
+  }
+
+  &__avatar {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    background: #ef4444;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 25px rgba(239, 68, 68, 0.35);
+  }
+
+  &__badge {
+    position: absolute;
+    bottom: 6px;
+    right: -4px;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 4px 2px;
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111418;
+    line-height: 1.2;
+  }
+
+  &__message {
+    max-width: 320px;
+    font-size: 1rem;
+    color: #4e5d71;
+  }
+
+  &__tips {
+    margin-top: 1rem;
+    width: 100%;
+    background: #f0f2f4;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #e5e7eb;
+  }
+
+  &__tips-title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #111418;
+  }
+
+  &__tips-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__tips-item {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #4e5d71;
+    margin-bottom: 0.5rem;
+  }
+
+  &__tips-icon {
+    color: #137fec;
+    font-size: 1.25rem;
+  }
+
+  &__actions {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    height: 56px;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    &--primary {
+      background: #137fec;
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 8px 18px rgba(19, 127, 236, 0.3);
+    }
+  }
+
+  &__ios-indicator {
+    width: 120px;
+    height: 4px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 999px;
+    margin: 0 auto 0.75rem;
+  }
+}

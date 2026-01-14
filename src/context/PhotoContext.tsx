@@ -6,16 +6,16 @@ export type Step = 1 | 2 | 3;
 
 export interface PhotosState {
   userId: number | null;
-  step1: string | null;
-  step2: string | null;
-  step3: string | null;
+  step1: Blob | null;
+  step2: Blob| null;
+  step3: Blob | null;
 }
 
 interface PhotoContextType {
   setUserId: (id: number) => void;
   photos: PhotosState;
   currentStep: Step;
-  setPhotoByStep: (step: Step, photo: string | null) => void;
+  setPhotoByStep: (step: Step, photo: Blob | null) => void;
   nextStep: () => void;
   prevStep: () => void;
   resetPhotos: () => void;
@@ -43,7 +43,7 @@ export const PhotoProvider = ({ children }: { children: ReactNode }) => {
     }));
   }
 
-  const setPhotoByStep = (step: Step, photo: string | null) => {
+  const setPhotoByStep = (step: Step, photo: Blob | null) => {
     setPhotos((prev) => ({
       ...prev,
       [`step${step}`]: photo,

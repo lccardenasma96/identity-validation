@@ -1,4 +1,5 @@
 import './App.css'
+import { AuthProvider } from './auth/AuthContext';
 import { PhotoProvider } from "./context/PhotoContext";
 
 import AppRoutes from './routes/AppRoutes'
@@ -8,7 +9,9 @@ function App() {
 
   return (
     <PhotoProvider> 
-    <AppRoutes />     
+      <AuthProvider>
+    <AppRoutes />  
+      </AuthProvider>   
     </PhotoProvider>
   )
 }
